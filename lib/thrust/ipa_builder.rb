@@ -26,7 +26,7 @@ module Thrust
           end
         end
 
-        app_name = @app_config.app_name
+        app_name = @deployment_config.app_name || @app_config.app_name
         target = @deployment_config.target || app_name
         scheme = @deployment_config.scheme
         distribution_certificate = @deployment_config.distribution_certificate || @app_config.distribution_certificate
